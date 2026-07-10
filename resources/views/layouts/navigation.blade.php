@@ -2,8 +2,10 @@
     <div style="max-width:1200px; margin:auto; padding:16px 30px; display:flex; justify-content:space-between; align-items:center;">
 
         <div style="display:flex; align-items:center; gap:25px;">
-            <a href="{{ route('home') }}" style="font-size:24px; font-weight:bold; color:#111; text-decoration:none;">
-                CAFFIN
+            <a href="{{ route('home') }}" style="display:flex; align-items:center;">
+            <img src="{{ asset('images/logo-caffin.png') }}"
+                alt="CAFFIN"
+                style="height:55px; width:auto;">
             </a>
 
             @auth

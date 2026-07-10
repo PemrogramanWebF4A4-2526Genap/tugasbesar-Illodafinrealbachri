@@ -42,9 +42,22 @@
         </a>
     </div>
 
-    <div style="width:420px; height:420px; border:2px solid #444; display:flex; align-items:center; justify-content:center; font-size:54px; font-weight:900; letter-spacing:4px;">
-        CAFFIN
-    </div>
+    <div style="
+    width:420px;
+    height:420px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+">
+    <img src="{{ asset('images/logo-caffin.png') }}"
+         alt="Logo CAFFIN"
+         style="
+            width:100%;
+            max-width:380px;
+            max-height:380px;
+            object-fit:contain;
+         ">
+</div>
 </section>
 
 <section style="padding:70px 80px; background:#fff;">

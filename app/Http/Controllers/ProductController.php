@@ -72,15 +72,23 @@ class ProductController extends Controller
             ->with('success', 'Produk berhasil ditambahkan.');
     }
 
-    public function show(Product $product)
-    {
-        abort_if($product->seller_id !== auth()->id(), 403, 'Akses ditolak.');
+   public function show(Product $product)
+{
+    abort_if(
+        $product->seller_id !== auth()->id(),
+        403,
+        'Akses ditolak.'
+    );
 
-        $product->load('images');
+    $product->load([
+        'category',
+        'images',
+        'orderItems',
+        'reviews.buyer',
+    ]);
 
-        return view('seller.products.show', compact('product'));
-    }
-
+    return view('seller.products.show', compact('product'));
+}
     public function edit(Product $product)
     {
         abort_if($product->seller_id !== auth()->id(), 403, 'Akses ditolak.');
